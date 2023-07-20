@@ -1,8 +1,8 @@
 #include<stdio.h>
 int main()
 {
-    // float area = (10 + 15) * 7 / 2;
-    float area =  7 / 2;
-    printf("%f",area);
+    // int a,b,h;
+    double area =  (double)(10+15)*7/2;
+    printf("%.1f",area);
     return 0;
 }
