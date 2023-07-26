@@ -17,9 +17,9 @@ int main()
     printf("product is %d\n",product);
     
     int minimum;
-    if (a > b & b > c | b > a & a > c) {
+    if (a > b && b > c || b > a && a > c) {
         minimum = c;
-    } else if (a > c & c > b | c > a & a > b)
+    } else if (a > c && c > b || c > a && a > b)
     {
         minimum = b;
     } else {
@@ -28,9 +28,9 @@ int main()
     printf("smallest is %d\n",minimum);
 
     int maximum;
-    if (a > b & b > c | a > c & c > b) {
+    if (a > b && b > c || a > c && c > b) {
         maximum = a;
-    } else if (b > a & a > c | b > c & c > a)
+    } else if (b > a && a > c || b > c && c > a)
     {
         maximum = b;
     } else {

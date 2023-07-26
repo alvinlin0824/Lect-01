@@ -14,7 +14,7 @@ int main()
     x = (double)(4*head-feet)/2;
     y = (double)(feet-2*head)/2;
     
-    if (x == (int)x & y == (int)y) {
+    if (x == (int)x && y == (int)y) {
         printf("YES\n");
         printf("%.0f %.0f",x, y);
     } else {
