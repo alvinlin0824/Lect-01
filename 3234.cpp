@@ -33,40 +33,10 @@ int main()
     
     cin >> a >> b >> c;
   
-    cout << sum(a,b,c) << endl;
-    cout << mean(a,b,c) << endl;
-    cout << sd(a,b,c) << endl;
+    int c = c % 10;
 
-    // ones
-    // int o1 = a % 10; 
-    // int o2 = b % 10; 
-    // int o3 = (int)c % 10;
-    // // tens
-    // int t1 = (a/10) % 10;
-    // int t2 = (b/10) % 10;
-    // int t3 = ((int)c /10) % 10;
-    // // hundreds
-    // int h1 = (a/100) % 10;
-    // int h2 = (b/100) % 10;
-    // int h3 = ((int)c /100) % 10;
-    // // thousands
-    // int th1 = (a/1000) % 10;
-    // int th2 = (b/1000) % 10;
-    // int th3 = ((int)c /1000) % 10;
-
-    // float d1 = sqrt(pow(x1-x2,2) + pow(y1-y2,2));
-    // float d2 = sqrt(pow(x1-x3,2) + pow(y1-y3,2));
-    // float d3 = sqrt(pow(x3-x2,2) + pow(y3-y2,2));
-    // float s =  (d1+d2+d3)/2;
-    // float area = sqrt(s*(s-d1)*(s-d2)*(s-d3));
-
-    // printf("%d\n",a);
-    // printf("%d\n",b);
-    // printf("%.1f\n ",c);
-
-    // printf("%d\n",t1);
-    // printf("%d\n",t2);
-    // printf("%.1f\n ",t3);
+    cout << sum(a%10,b%10,c%10) << " " << mean(a%10,b%10,c%10) << " " << sd(a%10,b%10,c%10) << endl;
+    cout << sum(a,b,c) << " " << mean(a,b,c) << " " << sd(a,b,c) << endl;
 
     return 0;
 }
