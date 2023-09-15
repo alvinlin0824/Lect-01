@@ -8,29 +8,6 @@
 
 using namespace std;
 
-double sum(int A, int B, double C){
-       return A + B + C;
-} 
-
-double mean(int A, int B, double C){
-       return double(A + B + C)/3;
-} 
-
-double sd(int A, int B, double C){
-       return sqrt(((pow(A,2) + pow(B,2) + pow(C,2)) - 3*pow((A+B+C)/3,2))/3);
-} 
-
-int get_digit(double num, int N){
-    int rem;       
-    for (int i = 1; i <= N; i++)
-    {      
-        rem = int(num) % 10;
-        num = num / 10;
-    }
-    return rem;
-}
-
-
 int main()
 {
     double x1,x2,x3,y1,y2,y3;
