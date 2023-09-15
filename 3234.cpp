@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include <cmath>
 
 using namespace std;
@@ -25,6 +26,16 @@ double sd(int A, int B, double C){
        return sqrt(((pow(A,2) + pow(B,2) + pow(C,2)) - 3*pow((A+B+C)/3,2))/3);
 } 
 
+int get_digit(double num, int N){
+    int rem;       
+    for (int i = 1; i <= N; i++)
+    {      
+        rem = int(num) % 10;
+        num = num / 10;
+    }
+    return rem;
+}
+
 
 int main()
 {
@@ -32,11 +43,12 @@ int main()
     double c;
     
     cin >> a >> b >> c;
-  
-    int c = c % 10;
-
-    cout << sum(a%10,b%10,c%10) << " " << mean(a%10,b%10,c%10) << " " << sd(a%10,b%10,c%10) << endl;
-    cout << sum(a,b,c) << " " << mean(a,b,c) << " " << sd(a,b,c) << endl;
+    
+    cout << setprecision(2) << sum(get_digit(a,4),get_digit(b,4),get_digit(c,4)) << " " << fixed << setprecision(2) << mean(get_digit(a,4),get_digit(b,4),get_digit(c,4)) << " " << sd(get_digit(a,4),get_digit(b,4),get_digit(c,4)) << endl;
+    cout << setprecision(0) << sum(get_digit(a,3),get_digit(b,3),get_digit(c,3)) << " " << fixed << setprecision(2) << mean(get_digit(a,3),get_digit(b,3),get_digit(c,3)) << " " << sd(get_digit(a,3),get_digit(b,3),get_digit(c,3)) << endl;
+    cout << setprecision(0) << sum(get_digit(a,2),get_digit(b,2),get_digit(c,2)) << " " << fixed << setprecision(2) << mean(get_digit(a,2),get_digit(b,2),get_digit(c,2)) << " " << sd(get_digit(a,2),get_digit(b,2),get_digit(c,2)) << endl;
+    cout << setprecision(0) << sum(get_digit(a,1),get_digit(b,1),get_digit(c,1)) << " " << fixed << setprecision(2) << mean(get_digit(a,1),get_digit(b,1),get_digit(c,1)) << " " << sd(get_digit(a,1),get_digit(b,1),get_digit(c,1)) << endl;
+    cout << fixed << setprecision(2) << sum(a,b,c) << " " << mean(a,b,c) << " " << sd(a,b,c) << endl;
 
     return 0;
 }
