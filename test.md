@@ -1,1 +1,1 @@
-# Price is $500
+# Price is $450
